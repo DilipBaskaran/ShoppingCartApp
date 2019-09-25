@@ -1,1 +1,1 @@
-# ShoppingCartApp
+# Shopping Cart Application
