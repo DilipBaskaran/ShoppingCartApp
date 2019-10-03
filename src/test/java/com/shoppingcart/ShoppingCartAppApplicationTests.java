@@ -6,6 +6,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.context.annotation.Import;
 import org.springframework.test.context.ContextConfiguration;
@@ -16,7 +17,7 @@ import com.shoppingcart.config.ShoppingCartAppApplication;
 import com.shoppingcart.config.WebSecurityConfig;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration
+@SpringBootApplication(scanBasePackages = "com.shoppingcart")
 @WebMvcTest(value = ShoppingCartAppApplication.class)
 @Import(value={WebSecurityConfig.class})
 public class ShoppingCartAppApplicationTests {
