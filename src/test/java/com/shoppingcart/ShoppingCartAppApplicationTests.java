@@ -13,7 +13,6 @@ import org.springframework.test.web.servlet.MockMvc;
 import com.shoppingcart.config.ShoppingCartAppApplication;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes={ShoppingCartAppApplication.class})
 @WebMvcTest
 public class ShoppingCartAppApplicationTests {
 
