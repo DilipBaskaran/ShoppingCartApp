@@ -14,7 +14,7 @@ import com.shoppingcart.config.ShoppingCartAppApplication;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes={ShoppingCartAppApplication.class})
-@@AutoConfigureMockMvc
+@AutoConfigureMockMvc
 public class ShoppingCartAppApplicationTests {
 
 	@Autowired
