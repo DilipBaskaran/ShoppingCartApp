@@ -125,7 +125,6 @@
             			</configuration>
 			</plugin>
 		</plugins>
-		<plugins>
     </plugins>
 	</build>
 
