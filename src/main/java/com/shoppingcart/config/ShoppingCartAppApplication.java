@@ -25,11 +25,13 @@ import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
+import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 @SpringBootApplication
 @EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class,SecurityAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
 @ComponentScan(basePackages="com.shoppingcart")
-public class ShoppingCartAppApplication implements WebMvcConfigurer{
+public class ShoppingCartAppApplication extends SpringBootServletInitializer implements WebMvcConfigurer{
 	
 	Logger logger = Logger.getLogger(ShoppingCartAppApplication.class);
 	
@@ -124,5 +126,8 @@ public class ShoppingCartAppApplication implements WebMvcConfigurer{
 		app.run(args);
 	}
 	
-	
+	@Override
+	  protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+	    return application.sources(ShoppingCartAppApplication.class);
+	  }
 }
