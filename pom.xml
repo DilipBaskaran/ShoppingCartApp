@@ -120,8 +120,13 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>    
+                			<mainClass>com.shoppingcart.config.ShoppingCartAppApplication</mainClass>
+            			</configuration>
 			</plugin>
 		</plugins>
+		<plugins>
+    </plugins>
 	</build>
 
 </project>
